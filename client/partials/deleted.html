@@ -1,0 +1,15 @@
+<h1 id ='deleteH1' style = 'color:red;'>Deleted {{pet.name}}</h1>
+
+
+
+<script>
+	$(document).ready(function(){
+
+		console.log('doc ready');
+		$('#deleteH1' ).fadeTo( "slow", 0 );
+		setTimeout(function(){
+			window.location.href = '#/pets';
+
+		}, 1000);
+	})
+</script>

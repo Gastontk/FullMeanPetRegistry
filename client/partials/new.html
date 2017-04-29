@@ -1,0 +1,40 @@
+<h1>Add your pet below</h1>
+
+
+<form id = 'newPetForm' name = 'newPetForm' class='form' ng-submit='addPet()'>
+		<ng-messages for="newPetForm.name.$error"  role='alert' style='color:maroon;'>
+			<h5 ng-message="required">Please enter a value for Name.</h5>
+			<h5 ng-message="minlength">The Name must be at least 3 characters long.</h5>
+		</ng-messages>
+	<div  class="form-group">
+
+		Name: <input name= 'name' ng-model='newPet.name' class ='form-control' type="text" required ng-minlength='3'>
+
+	</div>
+		<ng-messages for="newPetForm.breed.$error"  role='alert' style='color:maroon;'>
+			<h5 ng-message="required">What breed? (required).</h5>
+			<h5 ng-message="minlength">The breed must be at least 3 characters long.</h5>
+		</ng-messages>
+	<div  class="form-group">
+		Breed: <input name ='breed' ng-model='newPet.breed' class ='form-control' type="text" required ng-minlength='3'>
+		
+		
+	</div>
+		<ng-messages for="newPetForm.age.$error"  role='alert' style='color:maroon;'>
+			<h5 ng-message="required">Please enter the age of the pet.</h5>
+		</ng-messages>
+	<div  class="form-group">
+		Age: <input name = 'age' ng-model='newPet.age' class ='form-control' type="number" required>
+		
+		
+	</div>
+		<ng-messages for="newPetForm.owner.$error"  role='alert' style='color:maroon;' required ng-minlength='3'>
+			<h5 ng-message="required">Please enter a value for the Owner.</h5>
+			<h5 ng-message="minlength">Owner must be at least 3 characters long.</h5>
+		</ng-messages>
+	<div  class="form-group">
+		Owner:  <input name ='owner' ng-model='newPet.owner' class ='form-control' type="text" required ng-minlength='3'>
+		
+	</div>
+		<input type="submit" value='create' class = 'btn btn-default'>
+</form>

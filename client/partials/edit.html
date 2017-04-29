@@ -1,0 +1,46 @@
+<h1>This will be edit  {{editPet.name}}</h1>
+
+
+<form name ='editPetForm' class ='form' >
+	<ng-messages for="editPetForm.name.$error"  role='alert' style='color:maroon;'>
+		<h5 ng-message="required">Please enter a value for Name.</h5>
+		<h5 ng-message="minlength">The Name must be at least 4 characters long.</h5>
+	</ng-messages>
+
+
+
+	<div  class="form-group">
+		Name: <input name='name' type="text" ng-model='editPet.name' required ng-min='3'>
+
+	</div>	
+
+	<ng-messages for="editPetForm.breed.$error"  role='alert' style='color:maroon;'>
+		<h5 ng-message="required">Please enter a value for Name.</h5>
+		<h5 ng-message="minlength">The Name must be at least 4 characters long.</h5>
+	</ng-messages>
+	<div  class="form-group">
+		Breed: <input name='breed'  type="text" ng-model='editPet.breed' required ng-min='3'>
+	</div>	
+
+	<ng-messages for="editPetForm.age.$error"  role='alert' style='color:maroon;'>
+		<h5 ng-message="required">Please enter a value for Age.</h5>
+	</ng-messages>
+	<div  class="form-group">
+		Age: <input name='age'  type="number" ng-model='editPet.age' required>
+	</div>	
+
+
+	<ng-messages for="editPetForm.owner.$error"  role='alert' style='color:maroon;'>
+		<h5 ng-message="required">Please give the pet an owner.</h5>
+		<h5 ng-message="minlength">The Owners name must be at least 3 characters long.</h5>
+	</ng-messages>
+	<div  class="form-group">
+		Owner: <input name='owner'  type="text" ng-model='editPet.owner' required ng-min='3'>
+	</div>	
+
+
+
+		<input type="submit"  ng-click = 'updatePet(editPet)' value='change'>
+
+
+</form>

@@ -1,0 +1,29 @@
+<h1>Pet Registry</h1>
+
+<div >
+
+	<table id = 'petsTable' class = 'table table-striped table-bordered'>
+		<tr>
+			<th>Name:</th>
+			<th>Breed:</th>
+			<th>Age:</th>
+			<th>Owner:</th>
+			<th>View:</th>
+			<th>Edit:</th>
+			<th>Delete:</th>
+		</tr>
+		<tr ng-repeat = 'pet in pets'>
+			<td>{{pet.name}}</td>
+			<td>{{pet.breed}}</td>
+			<td>{{pet.age}}</td>
+			<td>{{pet.owner}}</td>	
+			<td><a href="#/{{pet._id}}">View</a></td>
+			<td><a href="#/edit/{{pet._id}}">Edit</a></td>
+			<td><a href="#/delete/{{pet._id}}">Delete</a></td>
+
+		</tr>
+
+	</table>
+	<a href="#/new">New Pet Entry</a>
+
+</div>
