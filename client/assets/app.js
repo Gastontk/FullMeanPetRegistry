@@ -195,9 +195,7 @@ app.controller('indController', ['$routeParams', '$scope', 'petFactory', '$locat
 		window.location.href = '#/pets';
 
 	}
-	// $scope.deletePet = function(){
-	// 	console.log('In scope.deletePet', $routeParams)
-	// }
+
 	$scope.updatePet = function(editPet){
 		console.log('In scope.updatePet', editPet);
 		petFactory.updatePet(editPet, $routeParams, function(data){
@@ -222,22 +220,6 @@ app.controller('deleteController', ['$routeParams', '$scope', 'petFactory', '$lo
 
 
 	})
-	// $scope.addPet = function(){
-	// 	console.log('In add pet.', $scope.newPet);
-	// 	petFactory.createPet($scope);
-	// 	window.location.href = '#/pets';
-
-	// }
-	// $scope.deletePet = function(){
-	// 	console.log('In scope.deletePet', $routeParams)
-	// }
-	// $scope.updatePet = function(editPet){
-	// 	console.log('In scope.updatePet', editPet);
-	// 	petFactory.updatePet(editPet);
-	// }
-
-
-
 }])
 
 
